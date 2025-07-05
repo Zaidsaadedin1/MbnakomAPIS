@@ -6,19 +6,18 @@ namespace MbnakomAPIS.Common.Entities
     {
         public int Id { get; set; }
 
-        // Patient Information
+        // Client Information
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
         public string Email { get; set; } = null!;
         public string Phone { get; set; } = null!;
 
-        // Appointment Details
+        // Consultation Details
         public string ServiceType { get; set; } = null!;
+        public string? PropertyType { get; set; } // Added for property type (apartment, villa, etc.)
         public DateTime PreferredDate { get; set; }
         public string PreferredTime { get; set; } = null!;
-        public string Concerns { get; set; } = null!;
-        public string? MedicalHistory { get; set; }
-
+        public string ProjectDetails { get; set; } = null!; // Renamed from Concerns
         public bool TermsAccepted { get; set; }
         public AppointmentStatus Status { get; set; } = AppointmentStatus.Pending;
 

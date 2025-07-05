@@ -7,17 +7,17 @@ namespace MbnakomAPIS.Common.Dtos.AppointmentDtos
         public int Id { get; set; }
 
         // Appointment Info
-        public string FirstName { get; set; } = null!;
-        public string LastName { get; set; } = null!;
-        public string Email { get; set; } = null!;
-        public string Phone { get; set; } = null!;
-        public string ServiceType { get; set; } = null!;
-        public DateTime PreferredDate { get; set; }
-        public string PreferredTime { get; set; } = null!;
-        public string Concerns { get; set; } = null!;
-        public string? MedicalHistory { get; set; }
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Phone { get; set; } = string.Empty;
+        public string ServiceType { get; set; } = string.Empty;
+        public string? PropertyType { get; set; }
+        public string PreferredDate { get; set; } = string.Empty;
+        public string PreferredTime { get; set; } = string.Empty;
+        public string ProjectDetails { get; set; } = string.Empty;
         public bool TermsAccepted { get; set; }
-        public AppointmentStatus Status { get; set; }
+        public string Status { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
 
