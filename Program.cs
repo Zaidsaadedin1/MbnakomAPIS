@@ -92,7 +92,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 // CORS Configuration
 var allowedOrigins = new[]
 {   
-    "https://www.mbnakom.site/",
+    "https://www.mbnakom.site",
     "https://*.railway.app"
 };
 
