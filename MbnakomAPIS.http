@@ -1,0 +1,6 @@
+@MbnakomAPIS_HostAddress = http://localhost:5254
+
+GET {{MbnakomAPIS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

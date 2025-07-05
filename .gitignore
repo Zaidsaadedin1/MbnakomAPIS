@@ -1,0 +1,56 @@
+# Ignore Visual Studio user-specific files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build files
+bin/
+obj/
+out/
+# Ignore appsettings with secrets
+appsettings.json
+
+# .NET Core packages
+*.nupkg
+*.snupkg
+project.lock.json
+artifacts/
+
+# Logs and Debugging
+*.log
+logs/
+TestResults/
+*.VSCodeCounter.log
+*.tmd
+
+# Runtime-generated files
+appsettings.Development.json
+appsettings.Local.json
+appsettings.Production.json
+secrets.json
+env/
+
+# Ignore sensitive files
+secrets/
+*.pfx
+*.p12
+*.cer
+*.key
+*.pem
+
+# Ignore Rider/JetBrains IDE files
+.idea/
+*.sln.iml
+
+# Node modules (if using front-end in the same repo)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Docker
+docker-compose.override.yml
+
+appsettings*.json
+*.Development.json
