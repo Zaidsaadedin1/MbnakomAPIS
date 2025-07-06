@@ -73,7 +73,17 @@ namespace MbnakomAPIS.Services
 
         public async Task<GenericResponse<int>> CreateAppointmentAsync(CreateAppointmentDto createAppointmentDto)
         {
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.Email == createAppointmentDto.Email || u.PhoneNumber == createAppointmentDto.Phone);
+
+            if (user != null)
+            {
+                createAppointmentDto.UserId = user.Id;
+            }
+
+
             var appointment = _mapper.Map<Appointment>(createAppointmentDto);
+
             _context.Appointments.Add(appointment);
             await _context.SaveChangesAsync();
 
@@ -83,6 +93,7 @@ namespace MbnakomAPIS.Services
                 Data = appointment.Id
             };
         }
+
 
         public async Task<GenericResponse<bool>> UpdateAppointmentAsync(int id, UpdateAppointmentDto updateAppointmentDto)
         {
